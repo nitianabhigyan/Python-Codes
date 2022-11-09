@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flask Arithmetic App</title>
+</head>
+<style type="text/css">
+	body{
+		background: #121212;
+		color: white;
+		font-family: Helvetica, arial;
+		font-size:calc(12px + 0.5vw);
+	}
+	form {
+		margin: 5%;
+		background: #4d4d4d;
+		width: 80%;
+		min-height: 500px;
+	}
+	input, select {
+		margin-top: 30px;
+	}
+</style>
+<body>
+<br>
+<h1> Please fill the form below </h1>
+
+<form method="POST" action="/result">
+	<label for="number"> Enter Number 1</label>
+	<input type="number" name="value1" min="1" step=1 required> <br>
+	<label for="number"> Enter Number 2</label>
+	<input type="number" name="value2" min="1" step=1 required> <br>
+	<label for="select"> Please choose your operation</label>
+	<select name="operation" required>
+		<option value="add">Addition</option>
+		<option value="subtract">Subtraction</option>
+		<option value="multiply">Multiplication</option>
+		<option value="divide">Division</option>
+	</select> <br>
+	<input type="submit">
+</form>
+</body>
+</html>
