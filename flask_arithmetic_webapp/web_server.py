@@ -53,20 +53,16 @@ def result_page():
 	#  Perform the calculaton.
 	if operation == "add":  #  You can also use switch / case to do this.
 		result = add([val1,val2])
-		return render_template("result.html",result = result)
 
 	elif operation == "subtract":
 		result = subtract([val1,val2])
-		return render_template("result.html",result = result)
 
 	elif operation == "multiply":
 		result = multiply([val1,val2])
-		return render_template("result.html",result = result)
 
 	elif operation == "divide":
 		result = divide([val1,val2])
-		return render_template("result.html",result = result)
-
+	return render_template("result.html",result = result)
 
 
 app.run(host="0.0.0.0",port="8000",debug=False)  # 0.0.0.0 to RUN ON ALL localports (i.e. 127.0.0.1 is included)
